@@ -1,7 +1,7 @@
 def flujo_control(a, b, c):
     resultado = ""
 
-    # Primer bloque de decisiones (estructura de diamante superior)
+  
     if a > 0:
         if b > 0:
             resultado += "R1-"
@@ -13,13 +13,12 @@ def flujo_control(a, b, c):
         else:
             resultado += "R4-"
 
-    # Segunda decisión (centro del grafo)
     if a + b + c > 5:
         resultado += "R5-"
     else:
         resultado += "R6-"
 
-    # Última decisión (estructura inferior del grafo)
+
     if a == b:
         resultado += "R7"
     else:
@@ -28,9 +27,7 @@ def flujo_control(a, b, c):
     return resultado
 
 
-# ----------------------------
-# 🧪 Casos de prueba (100% caminos independientes)
-# ----------------------------
+
 def pruebas():
     print("Caso 1: a=1, b=1, c=0")      # R1–R5–R8
     print("Salida:", flujo_control(1, 1, 0))
@@ -52,7 +49,7 @@ def pruebas():
     print("Salida:", flujo_control(2, 2, 2))
     print()
 
-# Ejecutar pruebas
+
 if __name__ == "__main__":
     pruebas()
 
